@@ -1,0 +1,77 @@
+/***************************************************************************
+ *   Copyright (C) 2007 by Simon Schulz   *
+ *   Simon.Schulz@esa.int   *
+ *                                                                         *
+ ***************************************************************************/
+ ///this file was automatically created by A on Thu Jan 24 13:58:28 2008
+
+#include "node_atc18_oai221d_zn.h"
+
+//register to node factory
+std::string Node_ATC18_OAI221D_ZN::node_factory_dummy = Node_factory<Node>::register_create_function("ATC18_OAI221D_ZN",Node_ATC18_OAI221D_ZN::create_function);
+std::string Node_ATC18_OAI221D_ZN::node_factory_dummy2 = Node_factory<Node>::register_output("ATC18_OAI221D","ZN");
+
+Node_ATC18_OAI221D_ZN::Node_ATC18_OAI221D_ZN(const char *name) : Node(name, 5){
+    port_map_vector.push_back("A"); //0
+    port_map_vector.push_back("B1"); //1
+    port_map_vector.push_back("B2"); //2
+    port_map_vector.push_back("C2"); //3
+    port_map_vector.push_back("C1"); //4
+
+}
+
+Node_ATC18_OAI221D_ZN::~Node_ATC18_OAI221D_ZN()
+{
+}
+
+std::string Node_ATC18_OAI221D_ZN::get_input_name(int i)
+{
+    switch(i){
+        case(0): return("A");
+        case(1): return("B1");
+        case(2): return("B2");
+        case(3): return("C2");
+        case(4): return("C1");
+        default: return "<?>";
+    }
+
+}
+
+int Node_ATC18_OAI221D_ZN::get_value(int run)
+{
+//define some helpers, makes it easier to write function
+    #define A input_nodes[0]->get_value(run)
+    #define B1 input_nodes[1]->get_value(run)
+    #define B2 input_nodes[2]->get_value(run)
+    #define C2 input_nodes[3]->get_value(run)
+    #define C1 input_nodes[4]->get_value(run)
+    #define SC 0
+    #define SD D
+    #define ZN  value
+
+
+    if (last_run != run){
+        //need to recalc
+        last_run_value = (!((C1 || C2) && (B1 || B2) && A));
+        last_run = run;
+    }
+    return last_run_value;
+}
+
+std::string Node_ATC18_OAI221D_ZN::get_formula()
+{
+//define some helpers, makes it easier to write function
+    std::string formula_A = input_nodes[0]->get_formula();
+    std::string formula_B1 = input_nodes[1]->get_formula();
+    std::string formula_B2 = input_nodes[2]->get_formula();
+    std::string formula_C2 = input_nodes[3]->get_formula();
+    std::string formula_C1 = input_nodes[4]->get_formula();
+    std::string formula_0 = "FALSE";
+    std::string formula_1 = "TRUE";
+
+    if (is_safe){
+        return "SAFE";
+    }else{
+        return std::string("(!((" + formula_C1 + " || " + formula_C2 + ") && (" + formula_B1 + " || " + formula_B2 + ") && " + formula_A + "))");
+    }
+}

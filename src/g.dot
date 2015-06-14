@@ -1,0 +1,77 @@
+digraph G
+{
+        // printing node 'UNASSIGNED_OUTPUT' @0x8108568
+	        "UNASSIGNED_OUTPUT\n@0x8108568" [comment="10Node_INPUT",shape="polygon",sides="5"];
+		        // printing node 'DUT/mysub1inst/clk[2]_CONNECTOR_' @0x8107220
+			        "DUT/mysub1inst/clk[2]_CONNECTOR_\n@0x8107220" [comment="18Node_ATC18_BUFFD_Z"];
+				        "DUT/Mclk[2]_CONNECTOR_\n@0x8106C18" [comment="18Node_ATC18_BUFFD_Z"];
+					        "DUT/Mclk[2]__IN\n@0x8107EA0" [comment="10Node_INPUT",shape="polygon",sides="5"];
+						        "DUT/Mclk[2]__IN\n@0x8107EA0" -> "DUT/Mclk[2]_CONNECTOR_\n@0x8106C18";
+							        "DUT/Mclk[2]_CONNECTOR_\n@0x8106C18" -> "DUT/mysub1inst/clk[2]_CONNECTOR_\n@0x8107220";
+								        // printing node 'DUT/mysub1inst/clk[0]_CONNECTOR_' @0x8107110
+									        "DUT/mysub1inst/clk[0]_CONNECTOR_\n@0x8107110" [comment="18Node_ATC18_BUFFD_Z"];
+										        "DUT/Mclk[0]_CONNECTOR_\n@0x8106B28" [comment="18Node_ATC18_BUFFD_Z"];
+											        "DUT/Mclk[0]__IN\n@0x8107BD8" [comment="10Node_INPUT",shape="polygon",sides="5"];
+												        "DUT/Mclk[0]__IN\n@0x8107BD8" -> "DUT/Mclk[0]_CONNECTOR_\n@0x8106B28";
+													        "DUT/Mclk[0]_CONNECTOR_\n@0x8106B28" -> "DUT/mysub1inst/clk[0]_CONNECTOR_\n@0x8107110";
+														        // printing node 'DUT/VCC' @0x8108828
+															        "DUT/VCC\n@0x8108828" [comment="8Node_VCC"];
+																        // printing node 'DUT/MoutputA__OUT' @0x8108500
+																	        "DUT/MoutputA__OUT\n@0x8108500" [comment="11Node_OUTPUT"];
+																		        "DUT/MoutputA_CONNECTOR_\n@0x8106E40" [comment="18Node_ATC18_BUFFD_Z"];
+																			        "DUT/invOUT\n@0x8107010" [comment="19Node_ATC18_INV0D_ZN"];
+																				        "DUT/mysub1inst/outputA_CONNECTOR_\n@0x81078F8" [comment="18Node_ATC18_BUFFD_Z"];
+																					        "DUT/mysub1inst/reg1\n@0x8107980" [comment="18Node_ATC18_SDNRQ_Q",fillcolor="#AAAAFF",style="filled"];
+																						        "DUT/mysub1inst/scin_CONNECTOR_\n@0x8107AC0" [comment="18Node_ATC18_BUFFD_Z"];
+																							        "DUT/GND\n@0x81087D8" [comment="8Node_GND"];
+																								        "DUT/GND\n@0x81087D8" -> "DUT/mysub1inst/scin_CONNECTOR_\n@0x8107AC0";
+																									        "DUT/mysub1inst/clk[1]_CONNECTOR_\n@0x8107198" [comment="18Node_ATC18_BUFFD_Z"];
+																										        "DUT/Mclk[1]_CONNECTOR_\n@0x8106B90" [comment="18Node_ATC18_BUFFD_Z"];
+																											        "DUT/Mclk[1]__IN\n@0x8107D20" [comment="10Node_INPUT",shape="polygon",sides="5"];
+																												        "DUT/Mclk[1]__IN\n@0x8107D20" -> "DUT/Mclk[1]_CONNECTOR_\n@0x8106B90";
+																													        "DUT/Mclk[1]_CONNECTOR_\n@0x8106B90" -> "DUT/mysub1inst/clk[1]_CONNECTOR_\n@0x8107198";
+																														        "DUT/mysub1inst/myand_ABC\n@0x8107620" [comment="18Node_ATC18_AN02D_Z"];
+																															        "DUT/mysub1inst/myand_AB\n@0x8107568" [comment="18Node_ATC18_AN02D_Z"];
+																																        "DUT/mysub1inst/mybuf_inA\n@0x81076C0" [comment="18Node_ATC18_BUFFD_Z"];
+																																	        "DUT/mysub1inst/inputA_CONNECTOR_\n@0x81072D0" [comment="18Node_ATC18_BUFFD_Z"];
+																																		        "DUT/invA\n@0x8106F90" [comment="19Node_ATC18_INV0D_ZN"];
+																																			        "DUT/MinputA_CONNECTOR_\n@0x8106CA0" [comment="18Node_ATC18_BUFFD_Z"];
+																																				        "DUT/MinputA__IN\n@0x8108038" [comment="10Node_INPUT",shape="polygon",sides="5"];
+																																					        "DUT/MinputA__IN\n@0x8108038" -> "DUT/MinputA_CONNECTOR_\n@0x8106CA0";
+																																						        "DUT/MinputA_CONNECTOR_\n@0x8106CA0" -> "DUT/invA\n@0x8106F90";
+																																							        "DUT/invA\n@0x8106F90" -> "DUT/mysub1inst/inputA_CONNECTOR_\n@0x81072D0";
+																																								        "DUT/mysub1inst/inputA_CONNECTOR_\n@0x81072D0" -> "DUT/mysub1inst/mybuf_inA\n@0x81076C0";
+																																									        "DUT/mysub1inst/mybuf_inB\n@0x8107758" [comment="18Node_ATC18_BUFFD_Z"];
+																																										        "DUT/mysub1inst/inputB_CONNECTOR_\n@0x8107380" [comment="18Node_ATC18_BUFFD_Z"];
+																																											        "DUT/MinputB_CONNECTOR_\n@0x8106D10" [comment="18Node_ATC18_BUFFD_Z"];
+																																												        "DUT/MinputB__IN\n@0x81081D0" [comment="10Node_INPUT",shape="polygon",sides="5"];
+																																													        "DUT/MinputB__IN\n@0x81081D0" -> "DUT/MinputB_CONNECTOR_\n@0x8106D10";
+																																														        "DUT/MinputB_CONNECTOR_\n@0x8106D10" -> "DUT/mysub1inst/inputB_CONNECTOR_\n@0x8107380";
+																																															        "DUT/mysub1inst/inputB_CONNECTOR_\n@0x8107380" -> "DUT/mysub1inst/mybuf_inB\n@0x8107758";
+																																																        "DUT/mysub1inst/mybuf_inA\n@0x81076C0" -> "DUT/mysub1inst/myand_AB\n@0x8107568";
+																																																	        "DUT/mysub1inst/mybuf_inB\n@0x8107758" -> "DUT/mysub1inst/myand_AB\n@0x8107568";
+																																																		        "DUT/mysub1inst/mybuf_inC\n@0x8107800" [comment="18Node_ATC18_BUFFD_Z"];
+																																																			        "DUT/mysub1inst/inputC_CONNECTOR_\n@0x8107430" [comment="18Node_ATC18_BUFFD_Z"];
+																																																				        "DUT/MinputC_CONNECTOR_\n@0x8106D98" [comment="18Node_ATC18_BUFFD_Z"];
+																																																					        "DUT/MinputC__IN\n@0x8108368" [comment="10Node_INPUT",shape="polygon",sides="5"];
+																																																						        "DUT/MinputC__IN\n@0x8108368" -> "DUT/MinputC_CONNECTOR_\n@0x8106D98";
+																																																							        "DUT/MinputC_CONNECTOR_\n@0x8106D98" -> "DUT/mysub1inst/inputC_CONNECTOR_\n@0x8107430";
+																																																								        "DUT/mysub1inst/inputC_CONNECTOR_\n@0x8107430" -> "DUT/mysub1inst/mybuf_inC\n@0x8107800";
+																																																									        "DUT/mysub1inst/myand_AB\n@0x8107568" -> "DUT/mysub1inst/myand_ABC\n@0x8107620";
+																																																										        "DUT/mysub1inst/mybuf_inC\n@0x8107800" -> "DUT/mysub1inst/myand_ABC\n@0x8107620";
+																																																											        "DUT/mysub1inst/sdin_CONNECTOR_\n@0x8107B28" [comment="18Node_ATC18_BUFFD_Z"];
+																																																												        "DUT/GND\n@0x81087D8" -> "DUT/mysub1inst/sdin_CONNECTOR_\n@0x8107B28";
+																																																													        "DUT/mysub1inst/scin_CONNECTOR_\n@0x8107AC0" -> "DUT/mysub1inst/reg1\n@0x8107980";
+																																																														        "DUT/mysub1inst/clk[1]_CONNECTOR_\n@0x8107198" -> "DUT/mysub1inst/reg1\n@0x8107980";
+																																																															        "DUT/mysub1inst/myand_ABC\n@0x8107620" -> "DUT/mysub1inst/reg1\n@0x8107980";
+																																																																        "DUT/mysub1inst/sdin_CONNECTOR_\n@0x8107B28" -> "DUT/mysub1inst/reg1\n@0x8107980";
+																																																																	        "DUT/mysub1inst/reg1\n@0x8107980" -> "DUT/mysub1inst/outputA_CONNECTOR_\n@0x81078F8";
+																																																																		        "DUT/mysub1inst/outputA_CONNECTOR_\n@0x81078F8" -> "DUT/invOUT\n@0x8107010";
+																																																																			        "DUT/invOUT\n@0x8107010" -> "DUT/MoutputA_CONNECTOR_\n@0x8106E40";
+																																																																				        "DUT/MoutputA_CONNECTOR_\n@0x8106E40" -> "DUT/MoutputA__OUT\n@0x8108500";
+																																																																					        // printing node '1'b1' @0x80F7480
+																																																																						        "1'b1\n@0x80F7480" [comment="8Node_VCC"];
+																																																																							        // printing node '1'b0' @0x80F7430
+																																																																								        "1'b0\n@0x80F7430" [comment="8Node_GND"];
+																																																																									}
+
